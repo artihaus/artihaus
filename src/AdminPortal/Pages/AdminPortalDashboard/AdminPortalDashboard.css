@@ -1,0 +1,37 @@
+.ap-ad-admin-portal{
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    background-color: rgb(238, 238, 238);
+}
+.ap-ap-dashboard {
+    color: #fff;
+}
+
+.ap-ap-dashboardsidenav{
+    height: 100%;
+    background-color: #2e3547;
+    margin-bottom: 10px;
+}
+
+.ap-ap-dashboardsidenav li:hover{
+    margin-left: 4px;
+    margin-right: 4px;
+    border-left: 6px solid;
+    border-top: 2px solid #202530;
+    border-bottom: 2px solid #202530;
+    padding-left: 6px;
+    background-color: #202530;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.ap-ap-dashboardsidenav li{
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.ap-ap-dashboardsidenav img{
+    padding-right: 10px;
+    height: 1.3rem;
+    vertical-align: text-top;
+}

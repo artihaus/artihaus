@@ -1,0 +1,12 @@
+.close-button {
+    position: relative;
+    float: right;
+    padding: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 5px 1px rgb(123, 123, 123, .5);
+}

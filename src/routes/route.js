@@ -2,8 +2,13 @@
 import React, { Component } from 'react'
 import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
-import AdminPortal from '../AdminPotal/Pages/AdminPortalDashboard/AdminPortalDashboard'
 import Artihaus from '../Artihaus/Pages/ArtihausDashboard/ArtihausDashboard'
+import AdminPortal from '../AdminPortal/Pages/AdminPortalDashboard/AdminPortalDashboard'
+import AdminPortalProjects from '../Components/Projects/Projects'
+import AdminPortalProjectDetail from '../Components/Projects/ProjectDetail'
+import _404Page from '../Artihaus/Pages/_404Page/_404Page'
+
+import './routes.css'
 // import AdminPortalExpenses from '../Artihaus/Administrator/pages/expenses/expenses_page'
 
 class MainContainer extends Component {
@@ -20,10 +25,13 @@ class MainContainer extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div className='container'>
+                <div className='ap-container'>
                     <Switch>
                         <Route exact path='/' component={Artihaus} />
-                        <Route path='/admin_portal' component={AdminPortal} />
+                        <Route exact path='/admin-portal' component={AdminPortal} />
+                        <Route exact path='/admin-portal/projects' component={AdminPortalProjects} />
+                        <Route exact path='/admin-portal/projects/details' component={AdminPortalProjectDetail} />
+                        <Route component={_404Page}/>
                     </Switch>
                 </div>
             </BrowserRouter>

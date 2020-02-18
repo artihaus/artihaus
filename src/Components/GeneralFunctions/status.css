@@ -1,0 +1,46 @@
+.--progress_bar div{
+    margin-top: 1px
+}
+    .start_progress {
+width: 2px;
+height:2px;
+background-color:#000000;
+}
+
+.half_1_progress{
+width:6px;
+height:2px;
+background-color:#000000;
+}
+
+.half_2_progress{
+width:10px;
+height:2px;
+background-color:#000000;
+}
+
+.half_3_progress{
+width:14px;
+height:2px;
+background-color:#000000;
+}
+
+.half_4_progress{
+width:18px;
+height:2px;
+background-color:#000000;
+}
+
+.finish_progress{
+width:22px;
+height:2px;
+background-color:#000000;
+}
+
+.done{
+background-color:#0aba8a;
+}
+
+.red{
+background-color:#d70e0e;
+}

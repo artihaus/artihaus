@@ -1,0 +1,18 @@
+.ap-ap-subheader{
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    background-color: #fff;
+}
+.ap-ap-subheader--my-portal{
+    text-align: center;
+    padding: 15px;
+    font-size: 1.8em;
+    background-color: #202530;
+    border-bottom: 4px solid #2e3547;
+    color: #fff;
+}
+/* #e8e8e8 */
+
+.ap-ap-subheader--my-status{
+    border-bottom: 4px solid rgb(238, 238, 238);
+}

@@ -1,0 +1,65 @@
+.ap-ad--table-header {
+    background-color: rgb(238, 238, 238);
+    border-bottom: 2px solid #fff;
+}
+
+.ap-ad--project:hover{
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+}
+
+.ap-ad--container{
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.ap-ad--grid {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-gap: 10px;
+}
+
+.ap-ad--grid--card {
+    height: auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.app-ad--card-edit img {
+    height: 20px;
+}
+.app-ad--card-edit {
+    visibility: hidden;
+    position: absolute;
+    border: 1px solid;
+    padding-top: 4px;
+    padding-left: 3px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: -2px 4px 6px -4px rgb(123, 123, 123);
+    cursor: pointer;
+}
+.ap-ad--grid--card:hover .app-ad--card-edit{
+    visibility: visible;
+}
+
+.ap-ad--card-body {
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.--header {
+    text-align: center;
+    font-size: 1.2rem;
+}
+.--header input{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.--dates{
+    display: inline-flex;
+    align-items: baseline;
+}

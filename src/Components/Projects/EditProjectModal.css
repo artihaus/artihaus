@@ -1,0 +1,30 @@
+.edit-project-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgb(123, 123, 123, .5);
+}
+
+.edit-project-card{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid rgb(123, 123, 123, .7);
+    background-color: #fff;
+}
+
+.edit-project-card--header{
+    text-align: center;
+    margin: 10px;
+}

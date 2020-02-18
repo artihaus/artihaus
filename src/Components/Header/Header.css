@@ -1,0 +1,19 @@
+.ap-ad-header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .ap-ad-header--nav{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+  .ap-ad-header--nav a{
+    font-size: larger;
+    color: #202530;
+  }
+  .ap-ad-header--artihaus img{
+      height: 15rem;
+      margin-left: -20px;
+      margin-top: -65px;
+      margin-bottom: -60px;
+  }
