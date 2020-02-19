@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class ArtihausDashboard extends Component{
+class Artihaus extends Component{
 
     render(){
         return(
@@ -9,4 +9,4 @@ class ArtihausDashboard extends Component{
     }
 
 }
-export default ArtihausDashboard
+export default Artihaus
