@@ -4,19 +4,19 @@ import { baseUrl, apiKey } from '../Api/api'
 const ClientsApi = {
 
   create: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/clients/create`, data);
+    return axios.post(`${baseUrl}/clients/create`, data);
   },
 
   read: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/clients/read`, data);
+    return axios.post(`${baseUrl}/clients/read`, data);
   },
 
   update: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/clients/update`, data);
+    return axios.post(`${baseUrl}/clients/update`, data);
   },
 
   remove: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/clients/delete`, data);
+    return axios.post(`${baseUrl}/clients/delete`, data);
   }
 }
 

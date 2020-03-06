@@ -5,19 +5,19 @@ const UsersApi = {
 
   create: (data) => {
     console.log(data)
-    return axios.post(`${baseUrl}${apiKey}/users/create`, data);
+    return axios.post(`${baseUrl}/users/create`, data);
   },
 
   read: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/users/read`, data);
+    return axios.get(`${baseUrl}/users/read`, data);
   },
 
   update: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/users/update`, data);
+    return axios.post(`${baseUrl}/users/update`, data);
   },
 
   remove: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/users/delete`, data);
+    return axios.post(`${baseUrl}/users/delete`, data);
   }
 }
 

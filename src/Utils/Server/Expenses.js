@@ -4,32 +4,32 @@ import { baseUrl, apiKey } from '../Api/api'
 const ExpenseApi = {
 
   create: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/create`, data);
+    return axios.post(`${baseUrl}/expenses/create`, data);
   },
 
   read: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/read`, data);
+    return axios.post(`${baseUrl}/expenses/read`, data);
   },
 
 
   read_date_range: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/read-date-range`, data);
+    return axios.post(`${baseUrl}/expenses/read-date-range`, data);
   },
 
   read_false: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/expenses/read-false`, data);
+    return axios.get(`${baseUrl}/expenses/read-false`, data);
   },
 
   readById: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/read/:_id`, data);
+    return axios.post(`${baseUrl}/expenses/read/:_id`, data);
   },
 
   update: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/update`, data);
+    return axios.post(`${baseUrl}/expenses/update`, data);
   },
 
   remove: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/expenses/delete`, data);
+    return axios.post(`${baseUrl}/expenses/delete`, data);
   }
 }
 

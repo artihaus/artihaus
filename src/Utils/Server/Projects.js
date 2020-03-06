@@ -4,27 +4,27 @@ import { baseUrl, apiKey } from '../Api/api'
 const ProjectsApi = {
 
   create: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/projects/create`, data);
+    return axios.post(`${baseUrl}/projects/create`, data);
   },
 
   read: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/projects/read`, data);
+    return axios.get(`${baseUrl}/projects/read`, data);
   },
 
   read_false: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/projects/read-false`, data);
+    return axios.get(`${baseUrl}/projects/read-false`, data);
   },
 
   readById: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/projects/read/:_id`, data);
+    return axios.post(`${baseUrl}/projects/read/:_id`, data);
   },
 
   update: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/projects/update`, data);
+    return axios.post(`${baseUrl}/projects/update`, data);
   },
 
   remove: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/projects/delete`, data);
+    return axios.post(`${baseUrl}/projects/delete`, data);
   }
 }
 

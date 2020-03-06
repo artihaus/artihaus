@@ -5,32 +5,32 @@ const EarningApi = {
 
   create: (data) => {
     console.log(data)
-    return axios.get(`${baseUrl}${apiKey}/earnings/read`, data);
+    return axios.get(`${baseUrl}/earnings/read`, data);
   },
 
   read: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/earnings/read`, data);
+    return axios.post(`${baseUrl}/earnings/read`, data);
   },
 
   readAll: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/expenses/read`, data);
+    return axios.get(`${baseUrl}/expenses/read`, data);
   },
 
   read_latest: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/earnings/read-latest`, data);
+    return axios.get(`${baseUrl}/earnings/read-latest`, data);
   },
 
   readById: (data) => {
     console.log(data)
-    return axios.post(`${baseUrl}${apiKey}/earnings/read/:_id`, data);
+    return axios.post(`${baseUrl}/earnings/read/:_id`, data);
   },
 
   update: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/earnings/update`, data);
+    return axios.post(`${baseUrl}/earnings/update`, data);
   },
 
   remove: (data) => {
-    return axios.post(`${baseUrl}${apiKey}/earnings/delete`, data);
+    return axios.post(`${baseUrl}/earnings/delete`, data);
   }
 }
 

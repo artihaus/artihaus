@@ -3,6 +3,6 @@
 
 //export const baseUrl = 'http://localhost:3001'
 
-export const baseUrl = 'http://artihausapi.herokuapp.com'
+export const baseUrl = 'https://artihausapi.herokuapp.com'
 
 export const apiKey = ''
