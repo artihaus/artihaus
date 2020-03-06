@@ -1,14 +1,13 @@
-.edit-project-container{
+.create-expense-container{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 100;
     background-color: rgb(123, 123, 123, .5);
 }
 
-.edit-project-card{
+.create-expense-card{
     position: absolute;
     margin: auto;
     top: 0;
@@ -24,7 +23,7 @@
     background-color: #fff;
 }
 
-.edit-project-card--header{
+.create-expense-card--header{
     text-align: center;
     margin: 10px;
 }

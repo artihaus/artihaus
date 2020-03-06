@@ -5,8 +5,11 @@ import Consumer from '../../Utils/ContextApi/MyProvider'
 import { DateFormat } from '../GeneralFunctions/Moment'
 import { Status } from '../GeneralFunctions/Status'
 import { CapitalizeFirst } from '../GeneralFunctions/CapitalizeFirst'
-import AddProjectCard from './AddProjectCard'
-import EditProjectModal from './EditProjectModal'
+import CreateProjectCard from './CreateProjectCard'
+import UpdateProjectModal from './UpdateProjectModal'
+import CreateExpenseModal from '../Expenses/CreateExpenseModal'
+import CreateEarningModal from '../Earnings/CreateEarningModal'
+import OpenModalButton from '../Buttons/OpenModalButton'
 
 import './Projects.css'
 
@@ -21,40 +24,46 @@ class Projects extends Component {
     }
 
     handleProjects(context) {
-        const { projects, clients, isModalDisplaying } = context.state
+        const { projects, clients, isModalUpdateProjectDisplaying, isModalAddExpenseDisplaying, isModalAddEarningDisplaying, whichModalDisplay, modalKey } = context.state
         if (projects) {
             return (
                 <div className='ap-ad--container'>
-                {projects.length ?
-                    <div className='ap-ad--grid'>
-                    <AddProjectCard />
+                    {projects.length ?
+                        <div className='ap-ad--grid'>
+                            <CreateProjectCard />
                             {
                                 projects.map(project => {
                                     const { _id, name, address, city_code, client_id, status, started, finished } = project
                                     let client_name = this.handleClientId(clients, client_id)
                                     return (
-                                        <div key={_id} className='ap-ad--grid--card'>
-                                            <div className='app-ad--card-edit'
-                                                onClick={() => {
-                                                    context.updateProject(project)
-                                                    context.updateModalDisplay()
-                                                }}>
-                                                <img src={require('../../Assets/Images/edit-icon.svg')} alt='edit' />
+                                        <div key={_id} >
+                                            <div className='ap-ad--grid--card'>
+                                                <div className='ap-ad--card-body --header'>{name.toUpperCase()}</div>
+                                                <div className='ap-ad--card-body --header'>{CapitalizeFirst(client_name)}</div>
+                                                <div className='ap-ad--card-body --address'>{CapitalizeFirst(address)}</div>
+                                                <div className='ap-ad--card-body --address'>{city_code}</div>
+                                                <div className='ap-ad--card-body --address'>{DateFormat(started, 'Undergoing')}</div>
+                                                <div className='ap-ad--card-body  --dates'>{Status(status)} {DateFormat(finished, 'Undergoing')}</div>
+                                                <div className='--button-grid-4'>
+                                                    <OpenModalButton project={project} modal={`update-project${_id}`} origin='Update'/>
+                                                    <OpenModalButton project={project} modal={`create-expense${_id}`} origin='Expense'/>
+                                                    <OpenModalButton project={project} modal={`create-earning${_id}`} origin='Earning'/>
+                                                    <OpenModalButton project={project} modal={`create-timesheet${_id}`} origin='Time Sheet'/>
+                                                </div>
                                             </div>
-                                            <div className='ap-ad--card-body --header'>{name.toUpperCase()}</div>
-                                            <div className='ap-ad--card-body --header'>{CapitalizeFirst(client_name)}</div>
-                                            <div className='ap-ad--card-body --address'>{CapitalizeFirst(address)}</div>
-                                            <div className='ap-ad--card-body --address'>{city_code}</div>
-                                            <div className='ap-ad--card-body --address'>{DateFormat(started)}</div>
-                                            <div className='ap-ad--card-body  --dates'>{Status(status)} {DateFormat(finished)}</div>
+                                            {whichModalDisplay === `update-project${_id}` ? <UpdateProjectModal /> : <span/>}
+                                            {whichModalDisplay === `create-earning${_id}` && <CreateEarningModal />}
+                                            {whichModalDisplay === `create-expense${_id}` && <CreateExpenseModal />}
                                         </div>
                                     )
                                 })
                             }
                         </div>
                         :
-                        <div>Nothing to see here!</div>}
-                    {isModalDisplaying && <EditProjectModal />}
+                        <div className='ap-ad--grid'>
+                            <CreateProjectCard />
+                        </div>
+                    }
                 </div>
             )
         }

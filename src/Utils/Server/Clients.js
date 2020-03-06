@@ -4,7 +4,6 @@ import { baseUrl, apiKey } from '../Api/api'
 const ClientsApi = {
 
   create: (data) => {
-    console.log(data)
     return axios.post(`${baseUrl}${apiKey}/clients/create`, data);
   },
 

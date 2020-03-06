@@ -55,12 +55,36 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: none;
-    /* border-bottom: 1px solid rgb(65,65,65,.5); */
-    color: rgb(65,65,65)
+    border-bottom: 1px solid rgb(65,65,65,.2);
+    color: rgb(65,65,65);
+    width: -webkit-fill-available;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 button {
+    width: -webkit-fill-available;
     cursor: pointer;
     background-color: rgb(216, 216, 216);
+    box-sizing: border-box;
+}
+
+.--button-grid-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.--button-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.--button-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+.--button-grid-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
 }

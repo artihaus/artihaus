@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { baseUrl, apiKey } from '../Api/api'
 
-const ProjectsApi = {
+const EarningApi = {
 
   create: (data) => {
     console.log(data)
@@ -34,4 +34,4 @@ const ProjectsApi = {
   }
 }
 
-export default ProjectsApi
+export default EarningApi

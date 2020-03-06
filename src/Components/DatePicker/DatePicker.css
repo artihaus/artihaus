@@ -1,0 +1,36 @@
+.--date-picker-grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: rgb(65,65,65);
+    border-bottom: 1px solid rgb(65,65,65,.2);
+    margin-left: 20px;
+    height: 25px;
+}
+.--date-picker-grid input{
+    position: absolute;
+    border: none;
+    width: 34px;
+    height: 34px;
+    right: -3px;
+    cursor: pointer;
+    margin: 0;
+    top: -40px;
+    z-index: 2;
+    background: transparent;
+    color: transparent;
+}
+
+.--date-picker-grid img{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    top: -6px;
+}
+
+.--date-picker-grid .react-datepicker-popper{
+    left: 4px;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
+    margin-left: -45px;
+}

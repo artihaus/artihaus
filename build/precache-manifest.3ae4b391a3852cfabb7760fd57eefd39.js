@@ -1,23 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5822046c54cced2139c2a6228ba8ae7e",
+    "revision": "15bc2a0325f361035890b40bfbc2ed53",
     "url": "/index.html"
   },
   {
-    "revision": "83cb7976da9a7ad6c4d7",
-    "url": "/static/css/main.2e632bd6.chunk.css"
+    "revision": "0b5c41a1aaea00f50a2c",
+    "url": "/static/css/2.b90ce945.chunk.css"
   },
   {
-    "revision": "27aed750bfb5b0e55928",
-    "url": "/static/js/2.251948db.chunk.js"
+    "revision": "d939c55161dbd85046f3",
+    "url": "/static/css/main.dfe30896.chunk.css"
   },
   {
-    "revision": "928d7b5eb39d16fe9a880722c974b51e",
-    "url": "/static/js/2.251948db.chunk.js.LICENSE.txt"
+    "revision": "0b5c41a1aaea00f50a2c",
+    "url": "/static/js/2.364cc63d.chunk.js"
   },
   {
-    "revision": "83cb7976da9a7ad6c4d7",
-    "url": "/static/js/main.83243f8e.chunk.js"
+    "revision": "299cba5f6c747cbc295097594263041b",
+    "url": "/static/js/2.364cc63d.chunk.js.LICENSE.txt"
+  },
+  {
+    "revision": "d939c55161dbd85046f3",
+    "url": "/static/js/main.4778adc5.chunk.js"
   },
   {
     "revision": "47416cb5132e6d3a0330",
@@ -28,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/agenda-icon.e2678ba6.svg"
   },
   {
-    "revision": "3864a6f709425369b1d467e6cec5592f",
-    "url": "/static/media/artihaus.3864a6f7.svg"
+    "revision": "35ee75de8f1e8f123f25376f76e10d8c",
+    "url": "/static/media/artihaus.35ee75de.svg"
   },
   {
     "revision": "be965a9925d8e3b2e313fece57e4bedc",
@@ -44,6 +48,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/contact-icon.96587068.svg"
   },
   {
+    "revision": "8e01c9fe192ead030b9aaa60a9d41cb4",
+    "url": "/static/media/date-picker-icon.8e01c9fe.svg"
+  },
+  {
+    "revision": "c344b732b64253766d75f08b2a37d042",
+    "url": "/static/media/earning-icon-on-white.c344b732.svg"
+  },
+  {
     "revision": "38e077958bd096555c942cbef98886cc",
     "url": "/static/media/earning-icon.38e07795.svg"
   },
@@ -54,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "66a95aa3790b6a7f73eb22f4e0f287b1",
     "url": "/static/media/email-icon.66a95aa3.svg"
+  },
+  {
+    "revision": "2e2b38be07f400c820345dcbf9c5ef38",
+    "url": "/static/media/expense-icon-on-white.2e2b38be.svg"
   },
   {
     "revision": "afa028f44d334068c1f3b795050a7947",
@@ -74,6 +90,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "865d2dd1423d47d9be56634e3ba4386d",
     "url": "/static/media/project-icon.865d2dd1.svg"
+  },
+  {
+    "revision": "c79ea66fe24530e64bb421df5b854567",
+    "url": "/static/media/timesheet-icon-on-white.c79ea66f.svg"
   },
   {
     "revision": "e9b8c94ab3dc77c80fa1cbdafc8fb93a",

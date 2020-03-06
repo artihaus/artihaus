@@ -3,11 +3,6 @@
     border-bottom: 2px solid #fff;
 }
 
-.ap-ad--project:hover{
-    background-color: rgb(238, 238, 238);
-    cursor: pointer;
-}
-
 .ap-ad--container{
     padding: 20px;
     box-sizing: border-box;
@@ -15,7 +10,7 @@
 
 .ap-ad--grid {
     display: grid;
-    grid-template-columns: repeat( 3, 1fr);
+    grid-template-columns: repeat( 2, 1fr);
     grid-gap: 10px;
 }
 

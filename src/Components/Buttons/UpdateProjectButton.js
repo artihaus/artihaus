@@ -5,14 +5,15 @@ import ProjectApi from '../../Utils/Server/Projects'
 
 import './Close.css'
 
-class Delete extends Component {
+class UpdateProjectButton extends Component {
 
     handleUpdate( context ){
-        const { updateProject } = context.state
+        const { project } = context.state
         ProjectApi
-        .update( updateProject )
+        .update( project )
         .then( res => {
-            context.updateModalDisplay()
+            context.updateStateOfProjects( project )
+            context.modalDisplay('close')
         })
         .catch( err => {
             console.log(err)
@@ -25,7 +26,9 @@ class Delete extends Component {
                 {(context) => {
                     return(
                         <div>
-                            <button type='submit' onClick={ ()=> this.handleUpdate( context ) }>Update This Project</button>
+                            <button type='submit' onClick={ ()=> {
+                                this.handleUpdate( context )
+                            }}>Update This Project</button>
                         </div>
                     )
                 }}
@@ -34,4 +37,4 @@ class Delete extends Component {
     }
 }
 
-export default Delete
+export default UpdateProjectButton

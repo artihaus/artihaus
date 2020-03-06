@@ -4,6 +4,7 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
 import Artihaus from '../Artihaus/Pages/Artihaus/Artihaus'
 import AdminPortal from '../AdminPortal/Pages/AdminPortalDashboard/AdminPortalDashboard'
+import AdminPortalExpenses from '../AdminPortal/Pages/Expenses/Expenses'
 import _404Page from '../Artihaus/Pages/_404Page/_404Page'
 
 import './routes.css'
@@ -26,7 +27,7 @@ class MainContainer extends Component {
                 <div className='ap-container'>
                     <Switch>
                         <Route exact path='/' component={Artihaus} />
-                        <Route exact path='/admin-portal' component={AdminPortal} />
+                        <Route path='/admin-portal' component={AdminPortal} />
                         <Route component={_404Page}/>
                     </Switch>
                 </div>

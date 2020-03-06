@@ -1,19 +1,19 @@
 import axios from 'axios';
 import { baseUrl, apiKey } from '../Api/api'
 
-const ProjectsApi = {
+const ExpenseApi = {
 
   create: (data) => {
-    console.log(data)
-    return axios.get(`${baseUrl}${apiKey}/expenses/read`, data);
+    return axios.post(`${baseUrl}${apiKey}/expenses/create`, data);
   },
 
   read: (data) => {
     return axios.post(`${baseUrl}${apiKey}/expenses/read`, data);
   },
 
-  readAll: (data) => {
-    return axios.get(`${baseUrl}${apiKey}/expenses/read`, data);
+
+  read_date_range: (data) => {
+    return axios.post(`${baseUrl}${apiKey}/expenses/read-date-range`, data);
   },
 
   read_false: (data) => {
@@ -21,7 +21,6 @@ const ProjectsApi = {
   },
 
   readById: (data) => {
-    console.log(data)
     return axios.post(`${baseUrl}${apiKey}/expenses/read/:_id`, data);
   },
 
@@ -34,4 +33,4 @@ const ProjectsApi = {
   }
 }
 
-export default ProjectsApi
+export default ExpenseApi
