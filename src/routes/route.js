@@ -4,7 +4,6 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom'
 
 import Artihaus from '../Artihaus/Pages/Artihaus/Artihaus'
 import AdminPortal from '../AdminPortal/Pages/AdminPortalDashboard/AdminPortalDashboard'
-import AdminPortalExpenses from '../AdminPortal/Pages/Expenses/Expenses'
 import _404Page from '../Artihaus/Pages/_404Page/_404Page'
 
 import './routes.css'
