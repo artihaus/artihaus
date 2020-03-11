@@ -1,0 +1,38 @@
+.--hamburger-menu{
+    cursor: pointer;
+    position: relative;
+    top: -5px;
+    left: 15px;
+}
+
+
+.--hamburger-menu-icon{
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: #fff;
+    margin: 7px;
+}
+
+.--hamburger-menu-clicked{
+    cursor: pointer;
+    padding: 6px;
+    position: relative;
+    top: -11px;
+    left: 6px;
+    margin-right: -12px;
+
+    .--ham-2{
+        display: none
+    }
+    .--ham-1{
+        transform: rotate(45deg);
+        position: relative;
+        right: 0px;
+        bottom: -11px;
+    }
+
+    .--ham-3{
+        transform: rotate(-45deg);
+    }
+}

@@ -1,3 +1,9 @@
 .ap-ad--card--button{
     text-align: center;
 }
+
+.--create-project-date-picker .react-datepicker{
+    position: absolute;
+    top: -178px;
+    right: 35px;
+}

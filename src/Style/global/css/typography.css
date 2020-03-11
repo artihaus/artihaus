@@ -1,0 +1,52 @@
+@import './colors.css';
+
+@font-face {
+    font-family: 'Trade Gothic';
+    src: url('../../../assets/fonts/TradeGothicLTStd-BC20.otf') format('opentype');
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Acumin Pro', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body, a {
+    font-family: 'Acumin Pro', Helvetica, Arial, Helvetica, sans-serif;
+    color: var(--darkerGrey);
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+@media (max-width: 1439px) and (min-width: 1024px) {
+    body, a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 1023px) and (min-width: 820px) {
+    body, a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 819px) and (min-width: 768px) {
+    body, a {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 767px) and (min-width: 425px) {
+    body, a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 424px) {
+    body, a {
+        font-size: 1.4rem;
+    }
+}

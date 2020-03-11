@@ -27,10 +27,12 @@
     top: -6px;
 }
 
-.--date-picker-grid .react-datepicker-popper{
-    left: 4px;
+
+.react-datepicker__triangle{
+    display: none;
 }
 
-.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow {
-    margin-left: -45px;
+.react-datepicker {
+    right: 310px;
+    top: 110px;
 }

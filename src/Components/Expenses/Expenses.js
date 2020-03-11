@@ -25,26 +25,28 @@ class Expenses extends Component {
         const newState = this.state
         let index = 0
         let isStash = false
-        newState.stashToResolve.forEach(stash => {
-            if (stash._id === expense._id) {
-                isStash = true
-                newState.stashToResolveAmount -= expense.amount
-                newState.stashToResolve.splice(index, 1)
+        if(newState.stashToResolve){
+            newState.stashToResolve.forEach(stash => {
+                if (stash._id === expense._id) {
+                    isStash = true
+                    newState.stashToResolveAmount -= expense.amount
+                    newState.stashToResolve.splice(index, 1)
+                }
+                index++
+            })
+            if (!isStash) {
+                newState.stashToResolve.push(expense)
+                newState.stashToResolveAmount += expense.amount
             }
-            index++
-        })
-        if (!isStash) {
-            newState.stashToResolve.push(expense)
-            newState.stashToResolveAmount += expense.amount
+            this.setState(newState)
         }
-        this.setState(newState)
     }
 
     handleFilterCategory(context) {
         const { expenses } = context.state
         let categoryArray = []
         let categoryArrayObject = []
-        if (expenses.length) {
+        if ( expenses ) {
             expenses.forEach(expense => {
                 if (!categoryArray.includes(expense.category)) {
                     categoryArray.push(expense.category)
@@ -98,10 +100,6 @@ class Expenses extends Component {
             }
         })
         this.setState(newState)
-    }
-
-    handleExpenseFilterSelect(context) {
-        const newState = this.state
     }
 
     render() {

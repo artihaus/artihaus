@@ -53,9 +53,9 @@ class MyProvider extends Component {
             client_name: '',
             started: '',
         },
+        dashboard: false,
+        whichModalDisplay: 'none',
 
-        whichModalDisplay: '',
-        modalKey: '',
     }
     componentDidMount() {
         (async () => {
@@ -90,7 +90,7 @@ class MyProvider extends Component {
         })()
     }
 
-    render() {
+    render(props) {
         return (
             <Provider
                 value={{
@@ -117,7 +117,7 @@ class MyProvider extends Component {
                     removeExpenseFromExpenses: _id => {
                         const newState = this.state
                         let index = 0
-                        newState.expenses.forEach( expense => {
+                        newState.expenses.forEach(expense => {
                             if (expense._id === _id) {
                                 newState.expenses.splice(index, 1)
                             }
@@ -131,11 +131,11 @@ class MyProvider extends Component {
                             whichModalDisplay: modal
                         })
                     },
-                    // modalKeyDisplay: (_id) => {
-                    //     this.setState({
-                    //         modalKey: _id
-                    //     })
-                    // },
+                    handleDashboard: () => {
+                        this.setState({
+                            dashboard: !this.state.dashboard
+                        })
+                    },
 
                     updateProject: project => {
                         this.setState({ project: project })
@@ -196,67 +196,77 @@ class MyProvider extends Component {
 
                     setStateForEarning: ({ name: key, value }) => {
                         const newState = this.state
-                        if( key === 'project_id' ) newState.earning.project_id = value
-                        if( key === 'user_id' ) newState.earning.user_id = value
-                        if( key === 'amount' ) newState.earning.amount = value
-                        if( key === 'category' ) newState.earning.category = value
-                        if( key === 'size' ) newState.earning.size = value
-                        if( key === 'details' ) newState.earning.details = value
-                        if( key === 'status' ) newState.earning.status = value
-                        if( key === 'paidAt' ) newState.earning.paidAt = value
+                        if (key === 'project_id') newState.earning.project_id = value
+                        if (key === 'user_id') newState.earning.user_id = value
+                        if (key === 'amount') newState.earning.amount = value
+                        if (key === 'category') newState.earning.category = value
+                        if (key === 'size') newState.earning.size = value
+                        if (key === 'details') newState.earning.details = value
+                        if (key === 'status') newState.earning.status = value
+                        if (key === 'paidAt') newState.earning.paidAt = value
                         this.setState(newState)
                     },
 
-                    getClientCredentials: (client_name, user_id) => {
+                    getClientCredentials: ({ client_id }) => {
+                        console.log(client_id)
                         const newState = this.state
-                        let client_id
-                        let found_client = false
-                        if (newState.clients) {
-                            newState.clients.forEach(client => {
-                                if (client.name === client_name) {
-                                    client_id = client._id
-                                    found_client = true
+                        let client_name
+                        if ( client_id && newState.clients ) {
+                            newState.clients.map(client => {
+                                if( client._id === client_id){
+                                    client_name = client.name
                                 }
                             })
                         }
-                        if (!found_client) {
-                            ClientsApi
-                                .create({
-                                    name: client_name,
-                                    user_id
-                                })
-                                .then(res => {
-                                    newState.clients.unshift(res.data)
-                                    const { _id } = res.data
-                                    client_id = _id
-                                })
-                                .catch(err => console.log(err))
-                        }
-                        return client_id
-                    },
+                        return client_name
+                    // let client_id
+                    // let found_client = false
+                    // if (newState.clients) {
+                    //     newState.clients.forEach(client => {
+                    //         if (client.name === client_name) {
+                    //             client_id = client._id
+                    //             found_client = true
+                    //         } 
+                    //     })
+                    // }
+                    // if (!found_client) {
+                    //     ClientsApi
+                    //         .create({
+                    //             name: client_name,
+                    //             user_id
+                    //         })
+                    //         .then(res => {
+                    //             newState.clients.unshift(res.data)
+                    //             const { _id } = res.data
+                    //             client_id = _id
+                    //         })
+                    //         .catch(err => console.log(err))
+                    // }
+                    // return client_id
+                },
 
                     getUserCredentials: () => {
-                        const gui = JSON.parse(localStorage.getItem('gui'))
-                        return (gui)
-                    },
+            const gui = JSON.parse(localStorage.getItem('gui'))
+            return (gui)
+        },
 
-                    addNewProjectToState: (project) => {
-                        const newState = this.state
-                        newState.expenses.unshift(project)
-                        this.setState(newState)
-                    },
+        addNewProjectToState: (project) => {
+            const newState = this.state
+            newState.expenses.unshift(project)
+            this.setState(newState)
+        },
 
-                    addNewExpenseToState: (expense) => {
-                        const newState = this.state
-                        newState.expenses.unshift(expense)
-                        this.setState(newState)
-                    },
+            addNewExpenseToState: (expense) => {
+                const newState = this.state
+                newState.expenses.unshift(expense)
+                this.setState(newState)
+            },
 
-                    addNewEarningToState: (earning) => {
-                        const newState = this.state
-                        newState.earnings.unshift(earning)
-                        this.setState(newState)
-                    },
+                addNewEarningToState: (earning) => {
+                    const newState = this.state
+                    newState.earnings.unshift(earning)
+                    this.setState(newState)
+                },
 
                     clearState: () => {
                         const newState = this.state
@@ -272,8 +282,9 @@ class MyProvider extends Component {
                         this.setState(newState)
                     },
 
-                }} >
-                {this.props.children}
+                }
+} >
+    { this.props.children }
             </Provider >
         )
     }

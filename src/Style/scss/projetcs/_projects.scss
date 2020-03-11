@@ -1,3 +1,16 @@
+.ap-ad--grid {
+    display: grid;
+    grid-template-columns: repeat( 3, 1fr);
+    grid-gap: 10px;
+
+//     @include mobileL {
+//         display: block;
+//     }
+
+//     @include mobile {
+//         display: block;
+//     }
+}
 .ap-ad--table-header {
     background-color: rgb(238, 238, 238);
     border-bottom: 2px solid #fff;

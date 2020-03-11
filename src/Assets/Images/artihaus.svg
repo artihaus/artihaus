@@ -1,22 +1,26 @@
 <?xml version="1.0"?>
-<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+<svg width="545" height="140" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
  <!-- Created with SVG-edit - https://github.com/SVG-Edit/svgedit-->
 
  <g class="layer">
   <title>Layer 1</title>
-  <text fill="#000000" font-family="serif" font-size="24" id="svg_1" stroke="#000000" stroke-width="0" text-anchor="middle" transform="matrix(58.7008 0 0 7.95956 -19960.6 -2500.81)" x="345.5" xml:space="preserve" y="355.5"/>
-  <text fill="#3f3f3f" font-family="Sans-serif" font-size="52" height="10" id="svg_3" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(1.54952 0 0 3.3961 -145.515 -693.82)" x="299.034845" xml:space="preserve" y="292.554658">ARTI      HAUS</text>
-  <rect fill="#3f3f3f" height="10" id="svg_74" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 308.145 199.047)" width="38" x="289.144936" y="194.047238"/>
-  <rect fill="#333333" height="10" id="svg_76" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 298.656 208.804)" width="38" x="279.656412" y="203.803794"/>
-  <rect fill="#3f3f3f" height="10" id="svg_77" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 288.418 218.482)" width="38" x="269.417845" y="213.482289"/>
-  <rect fill="#333333" height="10" id="svg_78" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 308.295 257.852)" width="38" x="289.295086" y="252.852353"/>
-  <rect fill="#333333" height="10.345137" id="svg_79" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 298.849 268.031)" width="38" x="279.848575" y="262.858935"/>
-  <rect fill="#3f3f3f" height="10.345137" id="svg_80" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 288.746 278.038)" width="38" x="269.745919" y="272.865496"/>
-  <rect fill="#3f3f3f" height="10" id="svg_81" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 318.272 228.325)" width="38" x="299.272491" y="223.324516"/>
-  <rect fill="#3f3f3f" height="10" id="svg_83" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 327.788 237.839)" width="38" x="308.787895" y="232.839273"/>
-  <rect fill="#333333" height="10.345137" id="svg_84" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 337.958 247.526)" width="38" x="318.958475" y="242.353679"/>
-  <rect fill="#333333" height="10" id="svg_85" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 278.656 248)" width="38" x="259.656168" y="243"/>
-  <rect fill="#333333" height="10" id="svg_86" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 268.814 238.167)" width="38" x="249.813648" y="233.167328"/>
-  <rect fill="#333333" height="10" id="svg_87" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 259.151 228.161)" width="38" x="240.151162" y="223.160756"/>
+  <text fill="#000000" font-family="serif" font-size="24" id="svg_1" stroke="#000000" stroke-width="0" xml:space="preserve" y="100"/>
+  <text fill="#333333" font-family="Sans-serif" font-size="52" height="3" id="svg_3" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="0" text-anchor="middle" transform="matrix(1.54952 0 0 3.3961 -145.515 -693.82)" x="272" xml:space="preserve" y="243.5">ARTI      HAUS</text>
+  
+  <rect fill="#333333" height="10" id="svg_74" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 308.145 199.047)" width="38" x="136.5" y="104.2"/>
+  <rect fill="#333333" height="10" id="svg_76" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 298.656 208.804)" width="38" x="127" y="114.2"/>
+  <rect fill="#333333" height="11" id="svg_77" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 288.418 218.482)" width="38" x="117" y="123.5"/>
+  
+  <rect fill="#333333" height="10" id="svg_78" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 308.295 257.852)" width="38" x="136.7" y="163.5"/>
+  <rect fill="#333333" height="10" id="svg_79" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 298.849 268.031)" width="38" x="126.7" y="173.5"/>
+  <rect fill="#333333" height="10" id="svg_80" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(45 288.746 278.038)" width="38" x="116.7" y="183.5"/>
+  
+  <rect fill="#333333" height="10" id="svg_81" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 318.272 228.325)" width="38" x="210" y="376"/>
+  <rect fill="#333333" height="10" id="svg_83" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 327.788 237.839)" width="38" x="219.5" y="385"/>
+  <rect fill="#333333" height="10" id="svg_84" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 337.958 247.526)" width="38" x="230" y="395"/>
+  
+  <rect fill="#333333" height="10" id="svg_85" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 278.656 248)" width="38" x="170.5" y="395.5"/>
+  <rect fill="#333333" height="10" id="svg_86" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 268.814 238.167)" width="38" x="160.5" y="385.5"/>
+  <rect fill="#333333" height="10" id="svg_87" stroke="#333333" stroke-dasharray="null" stroke-linecap="square" stroke-linejoin="round" stroke-width="3" transform="rotate(135 259.151 228.161)" width="38" x="151" y="375.5"/>
  </g>
 </svg>

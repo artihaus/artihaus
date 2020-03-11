@@ -11,8 +11,6 @@ import CreateExpenseModal from '../Expenses/CreateExpenseModal'
 import CreateEarningModal from '../Earnings/CreateEarningModal'
 import OpenModalButton from '../Buttons/OpenModalButton'
 
-import './Projects.css'
-
 class Projects extends Component {
 
     handleClientId(clients, _id) {
@@ -24,8 +22,8 @@ class Projects extends Component {
     }
 
     handleProjects(context) {
-        const { projects, clients, isModalUpdateProjectDisplaying, isModalAddExpenseDisplaying, isModalAddEarningDisplaying, whichModalDisplay, modalKey } = context.state
-        if (projects) {
+        const { projects, clients, whichModalDisplay } = context.state
+        if ( projects && clients ) {
             return (
                 <div className='ap-ad--container'>
                     {projects.length ?
@@ -48,10 +46,10 @@ class Projects extends Component {
                                                     <OpenModalButton project={project} modal={`update-project${_id}`} origin='Update'/>
                                                     <OpenModalButton project={project} modal={`create-expense${_id}`} origin='Expense'/>
                                                     <OpenModalButton project={project} modal={`create-earning${_id}`} origin='Earning'/>
-                                                    <OpenModalButton project={project} modal={`create-timesheet${_id}`} origin='Time Sheet'/>
+                                                    <OpenModalButton project={project} modal={`create-timesheet${_id}`} origin='TimeSheet'/>
                                                 </div>
                                             </div>
-                                            {whichModalDisplay === `update-project${_id}` ? <UpdateProjectModal /> : <span/>}
+                                            {whichModalDisplay === `update-project${_id}` && <UpdateProjectModal />}
                                             {whichModalDisplay === `create-earning${_id}` && <CreateEarningModal />}
                                             {whichModalDisplay === `create-expense${_id}` && <CreateExpenseModal />}
                                         </div>

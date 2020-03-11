@@ -1,0 +1,103 @@
+// Colors
+$primary: #006db0;
+$lightPrimary: #287aad;
+$darkPrimary: #015081;
+$secondary: #0aba8a;
+$lightSecondary: #59cb9f;
+$clrWhite: #ffffff;
+$lightGreyA: #f4f4f4;
+$lightGreyB: #f5f5f5;
+$lightGreyC: #F8F9FA;
+$lightGreyD: #E5E2E2;
+$darkBlue: #223046;
+$clrGrey: #95989a;
+$mediumGrey: #7e7b7b;
+$borderGrey: #E6E2E2;
+$darkGrey: #666666;
+$light: #fdfdfc;
+$lighter: #fdfdfd;
+$mediumGreyLight: #888585;
+$darkerGrey: #0b0b0b;
+$varBlack: #000000;
+$mediumGreyLighter: #d6d6d6;
+$lightText: #fafcfb;
+$footerGrey: #434343;
+$mediumDarkerGrey: #707070;
+$mediumDarkGrey: #1a1a1a;
+$varLightGrey: #E6E2E2;
+$errorRed: #ff0033;
+
+$pretty--color-default: $primary;
+$pretty--color-primary: $secondary;
+
+// Media Queries
+// $desktopL-width: 1920px;
+$desktop-width: 1280px;
+$laptopL-width: 1024px;
+$laptop-width: 820px;
+$tablet-width: 768px;
+$mobileL-width: 425px;
+$mobile-width: 400px;
+
+// @mixin desktopL {
+//     @media (min-width: #{$desktopL-width}) {
+//         @content;
+//     }
+// }
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+@mixin laptopL {
+    @media (min-width: #{$laptopL-width}) and (max-width: #{$desktop-width - 1}) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media (min-width: #{$laptop-width}) and (max-width: #{$laptopL-width - 1 }) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1}) {
+        @content;
+    }
+}
+
+@mixin mobileL {
+    @media (min-width: #{$mobileL-width}) and (max-width: #{$tablet-width - 1}) {
+        @content;
+    }
+}
+
+// @mixin mobile {
+//     @media (min-width: #{$mobile-width}) and (max-width: #{$mobileL-width - 1}) {
+//         @content;
+//     }
+// }
+
+@mixin mobile {
+    @media (max-width: #{$mobileL-width - 1}) {
+        @content;
+    }
+}
+@mixin resize {
+    @media (min-width: #{$mobileL-width}) and (max-width: #{$tablet-width - 1}) {
+        @content;
+    }
+}
+
+// Utilities
+%center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// Commonly Used Things
+$border-grey-d: solid 2px $lightGreyD;

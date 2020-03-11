@@ -10,7 +10,6 @@ import './Close.css'
 class Delete extends Component {
 
     handleDelete(_id, context, origin) {
-        console.log(_id, origin)
         const { projects, expenses } = context.state
         const confirm = window.confirm(`Artihaus Will Permanently Remove This ${origin}`)
         if (confirm) {
@@ -56,7 +55,6 @@ class Delete extends Component {
         return (
             <Consumer>
                 {(context) => {
-                    console.log(this.props.origin)
                     const { project, expense } = context.state
                     let _id
                     if( this.props.origin === 'project' ) { _id = project._id }

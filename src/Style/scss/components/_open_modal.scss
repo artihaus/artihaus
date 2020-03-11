@@ -1,0 +1,13 @@
+.--open-modal-button{
+    padding: 5px 0 5px 0;
+
+    img{
+        height: 15px;
+        width: 15px;
+        vertical-align: middle;
+    }
+
+    @include laptopL {
+        display: block;
+    }
+}
