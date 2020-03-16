@@ -31,19 +31,7 @@
 .--container-dasboard-active{
     position: absolute;
     width: 15rem;
-    animation: slide .2s linear;
-
-    @keyframes slide {
-        0% {
-            left: -300px;
-        }
-        50% {
-            left: -150;
-        }
-        100%{
-            left: 0;
-        }
-    }
+    z-index: 1;
 }
 
 .ap-ap-dashboardsidenav{

@@ -7,8 +7,6 @@ import DatePicker from '../DatePicker/DatePicker'
 
 import { CapitalizeFirst } from '../GeneralFunctions/CapitalizeFirst'
 
-import './CreateExpenseModal.css'
-
 class CreateExpenseModal extends Component {
 
 

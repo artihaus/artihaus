@@ -7,8 +7,6 @@ import Artihaus from '../Artihaus/Pages/Artihaus/Artihaus'
 import AdminPortal from '../AdminPortal/container'
 
 import _404Page from '../Artihaus/Pages/_404Page/_404Page'
-
-import './routes.css'
 // import AdminPortalExpenses from '../Artihaus/Administrator/pages/expenses/expenses_page'
 
 class MainContainer extends Component {
@@ -25,7 +23,7 @@ class MainContainer extends Component {
     render() {
         return (
             <BrowserRouter>
-                <div className='ap-container'>
+                <div className='ap-routes-container'>
                     <Switch>
                         <Route exact path='/' component={Artihaus} />
                         <Route path='/admin-portal' component={AdminPortal} />

@@ -1,0 +1,38 @@
+.ap-ad-earning-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    box-sizing: border-box;
+    align-items: end;
+
+    @include laptop {
+        grid-template-columns: repeat( 2, 1fr);
+    }
+
+    @include tablet {
+        grid-template-columns: repeat( 2, 1fr);
+    }
+
+    @include mobileL {
+        grid-template-columns:  1fr;
+    }
+
+    @include mobile {
+        grid-template-columns:  1fr;
+    }
+}
+
+.ap-ad-earning-card{
+    height: auto;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px 20px 10px 20px;
+}
+
+.--earning-category{
+    display: block;
+}
+
+.--center{
+    text-align: center;
+}

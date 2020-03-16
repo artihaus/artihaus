@@ -4,8 +4,7 @@ import { baseUrl, apiKey } from '../Api/api'
 const EarningApi = {
 
   create: (data) => {
-    console.log(data)
-    return axios.get(`${baseUrl}/earnings/read`, data);
+    return axios.post(`${baseUrl}/earnings/create`, data);
   },
 
   read: (data) => {

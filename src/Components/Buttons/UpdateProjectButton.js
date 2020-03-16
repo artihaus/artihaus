@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import Consumer from '../../Utils/ContextApi/MyProvider'
 import ProjectApi from '../../Utils/Server/Projects'
 
-import './Close.css'
-
 class UpdateProjectButton extends Component {
 
     handleUpdate( context ){

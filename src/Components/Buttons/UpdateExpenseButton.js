@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import Consumer from '../../Utils/ContextApi/MyProvider'
 import ExpenseApi from '../../Utils/Server/Expenses'
 
-import './Close.css'
-
 class UpdateExpenseButton extends Component {
 
     handleUpdate( context ){

@@ -10,7 +10,6 @@ class HamMenu extends Component {
     }
 
     toggleClass() {
-
         this.setState({ className: !this.state.className })
     }
 
@@ -19,12 +18,12 @@ class HamMenu extends Component {
             <Provider>
                 {
                     context => {
+                        const { dashboard } = context.state
                         return (
                             <div onClick={() => {
-                                this.toggleClass()
                                 context.handleDashboard()
                             }}
-                                className={this.state.className ? '--hamburger-menu-clicked' : '--hamburger-menu'}
+                                className={dashboard ? '--hamburger-menu-clicked' : '--hamburger-menu'}
                             >
                                 <div className='--hamburger-menu-icon --ham-1'></div>
                                 <div className='--hamburger-menu-icon --ham-2'></div>

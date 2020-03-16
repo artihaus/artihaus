@@ -1,0 +1,17 @@
+.ap-routes-container{
+    padding: 0 20px;
+
+    @include tablet {
+      padding: 0;
+    }
+
+    @include mobileL {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+
+    @include mobile {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+}

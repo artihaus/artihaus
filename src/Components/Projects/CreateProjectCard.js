@@ -17,7 +17,7 @@ class AddProjectCard extends Component {
             <Consumer>
                 {context => {
                     const { projectToCreate } = context.state
-                    let { name, address, city_code, client_name, started } = projectToCreate
+                    let { name, address, city_code, client_name } = projectToCreate
 
                     return (
                         <div className='ap-ad--grid--card'>

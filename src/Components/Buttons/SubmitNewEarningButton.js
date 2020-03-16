@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import Consumer from '../../Utils/ContextApi/MyProvider'
 import EarningApi from '../../Utils/Server/Earnings'
 
-import './Close.css'
-
 class SubmitNewEarningButton extends Component {
 
     handleSubmit(context) {

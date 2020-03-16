@@ -18,8 +18,9 @@ class DatePickerComponent extends Component {
             <div className='--date-picker-grid'>
               <div className='--date-picker-date-display'>
               {
-                this.props.origin === 'create-expense' ? DateFormat(context.state.expense.createdAt) :
                 this.props.origin === 'create-project' ? DateFormat(context.state.projectToCreate.started) :
+                this.props.origin === 'create-expense' ? DateFormat(context.state.expense.createdAt):
+                this.props.origin === 'create-earning' ? DateFormat(context.state.earning.paidAt):
                 <span/>
               }
               </div>
@@ -32,6 +33,9 @@ class DatePickerComponent extends Component {
                     }
                     if (this.props.origin === 'create-project') {
                       context.createNewProject({ name: 'started', value: e })
+                    }
+                    if (this.props.origin === 'create-earning') {
+                      context.setStateForEarning({ name: 'paidAt', value: e })
                     }
                   }} />
               </div>

@@ -1,0 +1,36 @@
+.ap-ad-header{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    @include mobileL {
+        display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+  .ap-ad-header--nav{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+  }
+  .ap-ad-header--nav a{
+    font-size: larger;
+    color: #202530;
+
+    // @include mobileL {
+    //     grid-template-columns: 1fr;
+    //     grid-gap: 10px;
+    // }
+
+    // @include mobile {
+    //     grid-template-columns: 1fr;
+    //     grid-gap: 10px;
+    // }
+
+  }
+
+  .ap-ad-header--artihaus img{
+    height: 3.85rem;
+  }

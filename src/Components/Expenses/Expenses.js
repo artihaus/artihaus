@@ -8,8 +8,6 @@ import { CapitalizeFirst } from '../GeneralFunctions/CapitalizeFirst'
 import OpenModalButton from '../Buttons/OpenModalButton'
 import UpdateExpenseModal from './UpdateExpenseModal'
 
-import './Expenses.css'
-
 class Expenses extends Component {
 
     state = {
@@ -62,8 +60,7 @@ class Expenses extends Component {
         }
         return (
             categoryArrayObject.length ?
-                <div className={this.state.byCategoryArray.length > 0 ? '' : 'ap-ad-expense-grid'}>
-                    <div className='--category-header-grid'>
+                    <div className='--category-list'>
                         <div key='stash' className={this.state.category === 'stash' ? '--category-header-wrapper-active --category-tab' : '--category-header-wrapper --category-tab'} onClick={() => this.handleDisplayByCategory('stash', this.state.stashToResolve)}>
                             <div className='--category-tab-header'>STASH</div>
                             <div className='--category-tab-amount'>${this.state.stashToResolveAmount.toFixed(2)}</div>
@@ -80,7 +77,6 @@ class Expenses extends Component {
                             })
                         }
                     </div>
-                </div>
                 :
                 <div />
         )
@@ -124,15 +120,15 @@ class Expenses extends Component {
                                                 })
                                                 return (
                                                     <div key={_id} className={!status ? '--status-pending ap-ad-expense-card' : 'ap-ad-expense-card'}>
-                                                        <div className='--category'>{category.toUpperCase()}</div>
-                                                        <div className='--sub-amount-grid'>
-                                                            <div className='--subcategory'>{CapitalizeFirst(subcategory)}</div>
+                                                        <div className='--category'><b>{category.toUpperCase()}</b></div>
+                                                        <div className='--grid-2-auto'>
+                                                            <div className='--subcategory'>{subcategory.toUpperCase()}</div>
                                                             <div className='--amount'>${amount}</div>
                                                         </div>
                                                         <div className='--createdAt'>{DateFormat(createdAt)}</div>
 
                                                         <div className='--createdBy'><small>{createdBy}</small></div>
-                                                        <div className='--button-grid-2'>
+                                                        <div className='--grid-2-auto --gap-10'>
                                                             <OpenModalButton expense={expense} modal={`update-expense${_id}`} origin='Update' />
                                                             {
                                                                 addStashButton && <button onClick={() => this.handleStashToResolve(expense)} >{isStash ? 'DISCARD' : 'STASH'}</button>

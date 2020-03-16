@@ -1,0 +1,23 @@
+.update-earning-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; // z-index: 100;
+    background-color: rgba(123, 123, 123, .5);
+}
+
+.update-earning-card{// position: absolute;
+    margin: auto;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    width: 320px;
+    height: auto;
+
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(123, 123, 123, .7);
+    background-color: #fff;
+}

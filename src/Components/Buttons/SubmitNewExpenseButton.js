@@ -4,8 +4,6 @@ import Consumer from '../../Utils/ContextApi/MyProvider'
 
 import ExpenseApi from '../../Utils/Server/Expenses'
 
-import './Close.css'
-
 class SubmitNewExpenseButton extends Component {
 
     handleSubmit(context) {

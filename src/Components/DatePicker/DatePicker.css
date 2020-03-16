@@ -33,6 +33,7 @@
 }
 
 .react-datepicker {
+    /* position: fixed; */
     right: 310px;
     top: 110px;
 }

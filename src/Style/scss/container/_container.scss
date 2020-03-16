@@ -1,3 +1,20 @@
 .--container-grid{
     background-color: rgba(238, 238, 238, .5)
 }
+
+.ap-ad--container{
+    padding: 20px;
+    box-sizing: border-box;
+
+    @include tablet {
+        padding: 20px 0;
+    }
+
+    @include mobileL {
+        padding: 20px 0;
+    }
+
+    @include mobile {
+        padding: 20px 0;
+    }
+}

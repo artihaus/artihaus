@@ -82,7 +82,9 @@ class MyProvider extends Component {
                 })
 
             const earnings = EarningApi
-                .read({})
+                .read({
+                    status: false
+                })
                 .then(earnings => {
                     newState.earnings = earnings.data.sort((a, b) => a.updated_at - b.updated_at)
                     this.setState(newState)
@@ -125,6 +127,17 @@ class MyProvider extends Component {
                         })
                         this.setState(newState)
                     },
+                    removeEarningFromEarnings: _id => {
+                        const newState = this.state
+                        let index = 0
+                        newState.earnings.forEach(earning => {
+                            if (earning._id === _id) {
+                                newState.earnings.splice(index, 1)
+                            }
+                            index++
+                        })
+                        this.setState(newState)
+                    },
 
                     modalDisplay: (modal) => {
                         this.setState({
@@ -140,9 +153,12 @@ class MyProvider extends Component {
                     updateProject: project => {
                         this.setState({ project: project })
                     },
-
                     updateExpense: expense => {
                         this.setState({ expense: expense })
+                    },
+                    updateEarning: earning => {
+                        console.log( earning )
+                        this.setState({ earning: earning })
                     },
 
                     updateProjectValue: ({ name: key, value }) => {
@@ -204,87 +220,114 @@ class MyProvider extends Component {
                         if (key === 'details') newState.earning.details = value
                         if (key === 'status') newState.earning.status = value
                         if (key === 'paidAt') newState.earning.paidAt = value
+                        if (key === 'isUploaded') newState.earning.isUploaded = value
                         this.setState(newState)
                     },
 
-                    getClientCredentials: ({ client_id }) => {
-                        console.log(client_id)
+                    getClientCredentials: ({ client_id, client_name }) => {
                         const newState = this.state
-                        let client_name
-                        if ( client_id && newState.clients ) {
+                        let client
+
+                        if (client_id && newState.clients) {
                             newState.clients.map(client => {
-                                if( client._id === client_id){
-                                    client_name = client.name
+                                if (client._id === client_id) {
+                                    client = client.name
                                 }
                             })
                         }
-                        return client_name
-                    // let client_id
-                    // let found_client = false
-                    // if (newState.clients) {
-                    //     newState.clients.forEach(client => {
-                    //         if (client.name === client_name) {
-                    //             client_id = client._id
-                    //             found_client = true
-                    //         } 
-                    //     })
-                    // }
-                    // if (!found_client) {
-                    //     ClientsApi
-                    //         .create({
-                    //             name: client_name,
-                    //             user_id
-                    //         })
-                    //         .then(res => {
-                    //             newState.clients.unshift(res.data)
-                    //             const { _id } = res.data
-                    //             client_id = _id
-                    //         })
-                    //         .catch(err => console.log(err))
-                    // }
-                    // return client_id
-                },
+                        if (client_name && newState.clients) {
+                            newState.clients.map(clientObj => {
+                                if (clientObj.name === client_name) {
+                                    client = clientObj._id
+                                }
+                            })
+                        }
+                        return client
+                        // let client_id
+                        // let found_client = false
+                        // if (newState.clients) {
+                        //     newState.clients.forEach(client => {
+                        //         if (client.name === client_name) {
+                        //             client_id = client._id
+                        //             found_client = true
+                        //         } 
+                        //     })
+                        // }
+                        // if (!found_client) {
+                        //     ClientsApi
+                        //         .create({
+                        //             name: client_name,
+                        //             user_id
+                        //         })
+                        //         .then(res => {
+                        //             newState.clients.unshift(res.data)
+                        //             const { _id } = res.data
+                        //             client_id = _id
+                        //         })
+                        //         .catch(err => console.log(err))
+                        // }
+                        // return client_id
+                    },
 
                     getUserCredentials: () => {
-            const gui = JSON.parse(localStorage.getItem('gui'))
-            return (gui)
-        },
+                        const gui = JSON.parse(localStorage.getItem('gui'))
+                        return (gui)
+                    },
 
-        addNewProjectToState: (project) => {
-            const newState = this.state
-            newState.expenses.unshift(project)
-            this.setState(newState)
-        },
-
-            addNewExpenseToState: (expense) => {
-                const newState = this.state
-                newState.expenses.unshift(expense)
-                this.setState(newState)
-            },
-
-                addNewEarningToState: (earning) => {
-                    const newState = this.state
-                    newState.earnings.unshift(earning)
-                    this.setState(newState)
-                },
-
-                    clearState: () => {
+                    addNewProjectToState: (project) => {
                         const newState = this.state
-                        newState.project.name = ''
-                        newState.project.address = ''
-                        newState.project.address2 = ''
-                        newState.project.city_code = ''
-                        newState.project.client_id = ''
-                        newState.project.user_id = '5e21fa1183e005ceafe11c16'
-                        newState.project.status = false
-                        newState.project.started = ''
-                        newState.project.finished = ''
+                        newState.expenses.unshift(project)
                         this.setState(newState)
                     },
 
+                    addNewExpenseToState: (expense) => {
+                        const newState = this.state
+                        newState.expenses.unshift(expense)
+                        this.setState(newState)
+                    },
+
+                    addEarningToContext: (earning) => {
+                        const newState = this.state
+                        newState.earnings.unshift(earning)
+                        this.setState(newState)
+                    },
+
+                    clear: ( state ) => {
+                        const newState = this.state
+                        switch( state ){
+                            case 'earning':{
+                                newState.earning.project_id = ''
+                                newState.earning.user_id = ''
+                                newState.earning.amount = ''
+                                newState.earning.category = ''
+                                newState.earning.size = ''
+                                newState.earning.details = ''
+                                newState.earning.status = ''
+                                newState.earning.paidAt = ''
+                                newState.earning.isUploaded = ''
+                                this.setState( newState )
+                                break
+                            }
+                            default:{
+                                break
+                            }
+                        }
+                        // const newState = this.state
+                        // newState.project.name = ''
+                        // newState.project.address = ''
+                        // newState.project.address2 = ''
+                        // newState.project.city_code = ''
+                        // newState.project.client_id = ''
+                        // newState.project.user_id = '5e21fa1183e005ceafe11c16'
+                        // newState.project.status = false
+                        // newState.project.started = ''
+                        // newState.project.finished = ''
+                        // this.setState(newState)
+                    },
+
                 }
-} >
-    { this.props.children }
+                } >
+                {this.props.children}
             </Provider >
         )
     }

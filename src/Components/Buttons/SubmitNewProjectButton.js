@@ -3,21 +3,20 @@ import React, { Component } from 'react'
 import Consumer from '../../Utils/ContextApi/MyProvider'
 import ProjectApi from '../../Utils/Server/Projects'
 
-import './Close.css'
-
 class SubmitNewProjectButton extends Component {
 
     handleSubmit(context) {
         let { name, address, client_name, city_code, started } = context.state.projectToCreate
 
+        client_name = client_name.toLowerCase()
         if (name) name = name.toLowerCase()
         if (address) address = address.toLowerCase()
 
         const { user_id } = context.getUserCredentials()
-        const client_id = context.getClientCredentials(client_name.toLowerCase(), user_id)
-        console.log('CLIENT_ID', client_id)
+        const client_id = context.getClientCredentials({ client_name })
+        console.log(name, address, client_id, user_id, city_code, started)
 
-        if (name && address && client_id && city_code && started && client_id) {
+        if (name && address && client_id && user_id && city_code && started) {
             ProjectApi
                 .create({
                     name,
@@ -35,7 +34,7 @@ class SubmitNewProjectButton extends Component {
                     console.log(err)
                 })
         }
-        else { window.alert('Create New Project By Insert New Values!') }
+        else { window.alert('Enter All Inputs')}
     }
 
     render() {

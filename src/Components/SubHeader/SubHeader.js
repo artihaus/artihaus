@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import HamMenu from '../Buttons/HamburgerMenu'
 import Consumer from '../../Utils/ContextApi/MyProvider'
 
-import './SubHeader.css'
-
-
 class SubHeader extends Component {
 
     state={
@@ -23,7 +20,7 @@ class SubHeader extends Component {
                     const { dashboard } = context.state
                     return (
                         <div className='ap-ap-subheader'>
-                        <div className='ap-ap-subheader--my-portal'><HamMenu />My Portal</div>
+                        <div className='ap-ap-subheader--my-portal'><HamMenu /><span>My Portal</span></div>
                         
                         </div>
                     )

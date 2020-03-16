@@ -10,4 +10,16 @@
     @include laptopL {
         display: block;
     }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include mobileL {
+        display: block;
+    }
+
+    @include mobile {
+        display: block;
+    }
 }
